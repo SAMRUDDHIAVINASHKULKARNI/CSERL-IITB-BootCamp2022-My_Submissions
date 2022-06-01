@@ -1,0 +1,23 @@
+/Consider the files in directory make_exercise in this assignment folder.
+
+//Using the files main.cpp, hello.cpp and factiorial.cpp create a single binary main. Execute the program and check for correctness.
+Create a Makefile which will create a binary main (use gcc compiler) (using the files main.cpp, hello.cpp, factorial.cpp and functions.h). Note that, you must use makefile variables like compiler (CC), flags (CFLAGS), dependencies (DEPS) in your makefile.
+
+*************************************************************************************************************************************************************
+$(CC) = gcc
+final : main.o hello.o factorial.o 
+          $(CC) main.o hello.o factorial.o -o.final
+
+main.o: main.c function.h
+          $(CC) -c main.c
+
+hello.o: hello.c functions.h
+          $(CC) -c hello.c
+
+factorial.o: factorial.c functions.h
+          $(CC) -c factorial.c
+
+clean:
+          rm *.o final
+
+*************************************************************************************************************************************************************
