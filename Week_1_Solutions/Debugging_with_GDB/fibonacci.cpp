@@ -3,18 +3,18 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 
-  int number = 10;
+  int n = 10;
 
-  int s_l = 1;
-  int l = 1;
+  int second_last = 1;
+  int last = 1;
 
-  cout << s_l << endl << l << endl;
+  cout << second_last << endl << last << endl;
 
   for(int i=1; i<=10; i++) {
-    int next = s_l + l;
+    int next = second_last + last;
     cout << next << endl;
-    l = next;
-    s_l = l;
+    last = next;
+    second_last = last;
   }
 
   return 0;
